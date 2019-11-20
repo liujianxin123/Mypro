@@ -44,6 +44,14 @@ public class Offer_19 {
         return math2(s,s_index,m,m_index);
     }
 
+    /**
+     * 递归调用
+     * @param s
+     * @param s_index
+     * @param m
+     * @param m_index
+     * @return
+     */
     public static boolean math2(char[] s,int s_index,char[] m, int m_index){
 
         //当字符串与模式串都监测到尾部，说明匹配
