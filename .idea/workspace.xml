@@ -99,8 +99,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/suanfa/Offer/Offer_19.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-79">
-              <caret line="35" column="48" selection-start-line="35" selection-start-column="48" selection-end-line="35" selection-end-column="48" />
+            <state relative-caret-position="15">
+              <caret line="32" column="5" lean-forward="true" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -179,6 +179,9 @@
       <dir>$PROJECT_DIR$/src/suanfa/ERchashu</dir>
     </dirStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -254,6 +257,7 @@
     <option name="width" value="1400" />
     <option name="height" value="781" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -322,7 +326,7 @@
     <property name="SearchEverywhereHistoryKey" value="countingSort&#9;PSI&#9;JAVA://suanfa.paixu.TongPaiSort#countingSort&#10;GAME_WIDTH&#9;PSI&#9;JAVA://com.zzk.snake.constant.Constant#GAME_WIDTH" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1574238564475" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1574241137260" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
@@ -619,12 +623,12 @@
       <workItem from="1573797947718" duration="7804000" />
       <workItem from="1574041060624" duration="12727000" />
       <workItem from="1574126941671" duration="13145000" />
-      <workItem from="1574213438570" duration="13018000" />
+      <workItem from="1574213438570" duration="13030000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="750804000" />
+    <option name="totallyTimeSpent" value="750816000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -653,7 +657,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32946298" />
-      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49852726" weight="0.3280116" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5029455" side_tool="true" weight="0.2322206" />
@@ -1120,8 +1124,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/suanfa/Offer/Offer_19.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-79">
-          <caret line="35" column="48" selection-start-line="35" selection-start-column="48" selection-end-line="35" selection-end-column="48" />
+        <state relative-caret-position="15">
+          <caret line="32" column="5" lean-forward="true" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
         </state>
       </provider>
     </entry>
