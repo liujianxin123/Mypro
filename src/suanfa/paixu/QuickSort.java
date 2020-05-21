@@ -143,7 +143,6 @@ public class QuickSort {
                 params[j] = params[i];
                 params[i] = t;
             }
-
         }
 
         //将基准的值和i的位置互换

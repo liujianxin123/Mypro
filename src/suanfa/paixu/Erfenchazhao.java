@@ -187,9 +187,11 @@ public class Erfenchazhao {
     public static void main(String[] args) {
         Map m = new HashMap(6);
 //       double a =  Erfenchazhao.getSqureRoot(4,4);
-        int[] p = {0,2,4,4,4,5,6,9};
-        int a = Erfenchazhao.getSqureRoot5(p,p.length,4);
-        System.out.println(a);
+//        int[] p = {0,2,4,4,4,5,6,9};
+//        int a = Erfenchazhao.getSqureRoot5(p,p.length,4);
+//        System.out.println(a);
+
+        System.out.println(getSqureRoot(5,0.01));
 
     }
 

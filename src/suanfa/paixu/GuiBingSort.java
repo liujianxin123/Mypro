@@ -44,6 +44,9 @@ public class GuiBingSort {
         for (int e : a){
             System.out.print(e+" ");
         }
+        System.out.println("---------");
+        int d = 4 >>> 1;
+        System.out.println(d);
     }
 
 }

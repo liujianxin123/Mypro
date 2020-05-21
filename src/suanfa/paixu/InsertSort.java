@@ -3,6 +3,7 @@ package suanfa.paixu;
 import java.util.Arrays;
 
 /*
+ * https://blog.csdn.net/qq_42857603/article/details/81605124
  * 插入排序算法：
  * 1、以数组的某一位作为分隔位，比如index=1，假设左面的都是有序的.
  *
@@ -18,7 +19,7 @@ import java.util.Arrays;
  * 此时数组中的数据即为从小到大的顺序.
  *
  * @author jxliu
- *1 2 6 3 4
+ *1 5 6 3 4
  */
 public class InsertSort {
     private int[] array;
@@ -73,22 +74,63 @@ public class InsertSort {
         is.doInsertSort();
         System.out.println("排序后的数据为：");
         System.out.println(Arrays.toString(array));
-//        Map m = new HashMap(20);
-//        int a = 0100;
-//        int b = 1133;
-//        int c = a^b;
-//        System.out.println("a异或b的值："+ c);
-//
-//        HashMap<Integer, Integer> m = new LinkedHashMap<Integer, Integer>();
-//        m.put(3, 11);
-//        m.put(1, 12);
-//        m.put(5, 23);
-//        m.put(2, 22);
-//
-//        for (Map.Entry<Integer,Integer> e : m.entrySet()) {
-//            System.out.println(e.getKey());
-//        }
+
+        int[] array2 = {8,9,1,7,2,3,5,4,6,0};
+        shellSort(array2);
     }
 
+
+    /**
+     *  8 9 1 7 2 3 5 4 6 0
+     *
+     *  分成5组 【8 , 3 】，【 9 , 5 】，【 1 , 4 】，【 7 , 6 】，【 2 , 0】
+     *  排完序之后3 5 1 6 0 8 9 4 7 2
+     *  分成两组【 3 , 1 , 0 , 9 , 7  】，【 5 , 6 , 8 , 4 , 2】
+     * 插入排序的改进，希尔排序
+     * @param arrays
+     */
+    public static void shellSort(int[] arrays) {
+
+        //增量每次都/2
+        for (int step = arrays.length / 2; step > 0; step /= 2) {
+
+            //从增量那组开始进行插入排序，直至完毕
+            for (int i = step; i < arrays.length; i++) {
+
+                int j = i;
+                int temp = arrays[j];
+
+                // j - step 就是代表与它同组隔壁的元素
+                while (j - step >= 0 && arrays[j - step] > temp) {
+                    arrays[j] = arrays[j - step];
+                    j = j - step;
+                }
+                arrays[j] = temp;
+            }
+        }
+
+    }
+
+    /**
+     * 希尔排序解读：
+     * @param array
+     */
+    public static void shellSort2(int[] array) {
+        //希尔排序相当于外层增加了一个增量，用来分组，初始状态增量每次都/2
+        for (int step = array.length / 2; step > 0; step /= 2) {
+
+            //然后调用插入排序的方法，相当于把循环中的1换成增量
+            for(int index = step; index<array.length; index++){//外层向右的index，即作为比较对象的数据的index
+                int temp = array[index];//用作比较的数据
+                int leftindex = index-step;
+                while(leftindex>=0 && array[leftindex]>temp){//当比到最左边或者遇到比temp小的数据时，结束循环
+                    array[leftindex+step] = array[leftindex];
+                    leftindex = leftindex - step;
+                }
+                array[leftindex+step] = temp;//把temp放到空位上
+            }
+
+        }
+    }
 
 }
