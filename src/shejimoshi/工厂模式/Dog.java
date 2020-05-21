@@ -1,12 +1,9 @@
 package shejimoshi.工厂模式;
 
-public class Dog {
-    private static Dog ourInstance = new Dog();
+public class Dog implements Animal{
 
-    public static Dog getInstance() {
-        return ourInstance;
-    }
-
-    private Dog() {
+    @Override
+    public String say() {
+        return "汪汪";
     }
 }
