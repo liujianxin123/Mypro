@@ -1,5 +1,6 @@
 package bingfa.ThreadLocal;
 
+import java.lang.reflect.Method;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.concurrent.locks.Condition;
@@ -29,6 +30,19 @@ public class SafeDateFormat {
                 notFull.await();
             } catch (InterruptedException e) {
                 e.printStackTrace();
+            }
+        }
+
+
+        public static void main(String[] args) throws Exception {
+            Proxy target = new Proxy();
+            Method method = Proxy.class.getDeclaredMethod("run");
+            method.invoke(target);
+        }
+
+        static class Proxy {
+            public void run() {
+                System.out.println("run");
             }
         }
 }

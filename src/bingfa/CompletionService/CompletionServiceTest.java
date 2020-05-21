@@ -12,6 +12,8 @@ public class CompletionServiceTest {
     public void tet(){
         // 创建线程池
         ExecutorService executor = Executors.newFixedThreadPool(3);
+
+
         // 创建 CompletionService
         CompletionService<List> cs = new ExecutorCompletionService<>(executor);
         // 异步向电商 S1 询价

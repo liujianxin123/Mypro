@@ -55,9 +55,19 @@ class MyThreadPool{
         // 创建线程池
         MyThreadPool pool = new MyThreadPool(10, workQueue);
         // 提交任务
-        pool.execute(()->{
-            System.out.println("hello");
+//        pool.execute(()->{
+//            System.out.println("hello");
+//        });
+        pool.execute(new Runnable() {
+            @Override
+            public void run() {
+                System.out.println("hello");
+            }
         });
+
+
+        BlockingQueue<String> b = new LinkedBlockingQueue<>(2);
+
 
     }
 }

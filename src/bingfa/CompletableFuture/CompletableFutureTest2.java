@@ -9,7 +9,7 @@ import java.util.concurrent.Executors;
 public class CompletableFutureTest2 {
 
     public static void main(String[] args) {
-        CompletableFutureTest2.thenAccept();
+        CompletableFutureTest2.whenComplete();
     }
 
 
@@ -76,21 +76,21 @@ public class CompletableFutureTest2 {
      */
     public static void whenComplete(){
         CompletableFuture<String> futureA = CompletableFuture.
-                supplyAsync(() -> "执行结果:" + (100 / 0))
+                supplyAsync(() -> "执行结果:" + (100 / 2))
                 .thenApply(s -> "apply result:" + s)
                 .whenComplete((s, e) -> {
                     if (s != null) {
-                        System.out.println("s不等于null:"+s);//未执行
+                        System.out.println("s不等于null（）:"+s);//未执行
                     }
                     if (e != null) {
-                        System.out.println("e等于null的结果："+e);//e是异常消息
+                        System.out.println("e不等于null的结果（说明有报错）：---->"+e);//e是异常消息
                     } else {
-                        System.out.println(e.getMessage());//java.lang.ArithmeticException: / by zero
+                        System.out.println("<----->"+e.getMessage());//java.lang.ArithmeticException: / by zero
                     }
                 })
                 .exceptionally(e -> {
-                    System.out.println("ex"+e.getMessage()); //ex:java.lang.ArithmeticException: / by zero
-                    return "futureA result: 100";
+                    System.out.println("ex--->"+e.getMessage()); //ex:java.lang.ArithmeticException: / by zero
+                    return "做一些补偿操作--futureA result: 100";
                 });
         System.out.println(futureA.join());//futureA result: 100
     }

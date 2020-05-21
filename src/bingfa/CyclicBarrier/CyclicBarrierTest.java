@@ -52,4 +52,9 @@ public class CyclicBarrierTest {
 //        T2.start();
 //    }
 
+    public void tt(){
+        synchronized (this.getClass()){
+
+        }
+    }
 }
