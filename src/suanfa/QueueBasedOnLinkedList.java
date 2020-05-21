@@ -1,5 +1,7 @@
 package suanfa;
 
+import java.util.LinkedList;
+
 /**
  * 基于链表实现的队列
  */
@@ -53,5 +55,13 @@ public class QueueBasedOnLinkedList {
         public String getData() {
             return data;
         }
+    }
+
+    public void queueDemo(){
+        LinkedList<String> linkedList = new LinkedList<String>();
+        linkedList.poll();
+
+
+
     }
 }

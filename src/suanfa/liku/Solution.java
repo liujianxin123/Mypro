@@ -1,8 +1,6 @@
 package suanfa.liku;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Stack;
+import java.util.*;
 
 /**
  * Definition for singly-linked list.
@@ -13,6 +11,16 @@ import java.util.Stack;
  * }
  */
 class Solution {
+    public static void main(String[] args) {
+//        System.out.println(Solution.lengthOfLongestSubstring("abcabcbb"));
+//        System.out.println(Solution.isValid("{"));
+
+
+//        int[] a1 = {2,3,4},a2 = {2,4,1,8,3,0};
+//        System.out.println(nextGreaterElement(a1,a2));
+
+        pingfen();
+    }
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode root = new ListNode(0);
         ListNode cursor = root;
@@ -71,14 +79,7 @@ class Solution {
             return s.isEmpty();
         }
 
-    public static void main(String[] args) {
-//        System.out.println(Solution.lengthOfLongestSubstring("abcabcbb"));
-//        System.out.println(Solution.isValid("{"));
 
-
-        int[] a1 = {2,3,4},a2 = {2,4,1,8,3,0};
-        System.out.println(nextGreaterElement(a1,a2));
-    }
 
     //2,3,4
     //2,4,1,8,3,0
@@ -106,7 +107,7 @@ class Solution {
     }
 
 
-        public int[] twoSum(int[] nums, int target) {
+        public int[] test(int[] nums, int target) {
             Map<Integer, Integer> map = new HashMap<>();
             for(int i = 0; i<nums.length;i++){
                 int tmp = target - nums[i];
@@ -117,5 +118,32 @@ class Solution {
             }
             throw new IllegalArgumentException("No two sum solution");
         }
+
+
+    /**
+     * 给任意一个数组，去掉最大值和最小值求剩下数的平均数
+     */
+    public static void pingfen(){
+
+
+        char[] p = {9,2,5,4,3};
+        int max = p[0];
+        int min = p[p.length-1];
+        int count = 0;
+        for (int i = 0; i < p.length; i++) {
+            count += p[i];
+            if(max < p[i]){
+                max = p[i];
+            }
+            if(min > p[i]){
+                min = p[i];
+            }
+        }
+
+        int num = (count - min -max)/(p.length -2);
+
+        System.out.println(num);
+    }
+
 
 }

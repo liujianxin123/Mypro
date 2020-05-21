@@ -60,18 +60,17 @@ public class MinStack_liku {
 
 //
 //    // 创建FutureTask
-//    FutureTask<Integer> futureTask
-//            = new FutureTask<>(()-> 1+2);
+//    FutureTask<Integer> futureTask = new FutureTask<>(()-> 1+2);
 //    // 创建线程池
-//    ExecutorService es =
-//            Executors.newCachedThreadPool();
+//    ExecutorService es = Executors.newCachedThreadPool();
 //// 提交FutureTask
-//es.submit(futureTask);
+//    es.submit(futureTask);
 //    // 获取计算结果
 //    Integer result = futureTask.get();
 
 
     public static String thread(){
+
         ArrayBlockingQueue<Runnable> blockingDeque = new ArrayBlockingQueue<>(4);
         ExecutorService es = new ThreadPoolExecutor(2,4,1000,TimeUnit.MILLISECONDS,blockingDeque);
         String result = null;

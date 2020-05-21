@@ -23,6 +23,7 @@ public class TreeNodeTest {
         postOrderRe(node[0]);
         System.out.println("-------------------------");
         houxuSort(node[0]);
+
     }
 
     /**
@@ -215,6 +216,10 @@ public class TreeNodeTest {
             if(currentNode.getRight() != null)
                 list.add(currentNode.getRight());
         }
+
+        int[] p = new int[1000];
     }
+
+
 
 }
